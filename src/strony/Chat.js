@@ -2,7 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 export default function Chat() {
-      
+    
+    
+
     const [text,setText] = useState('');
     const [nick,setNick] = useState('BIL_LIE');
 
@@ -10,13 +12,13 @@ export default function Chat() {
 
     function Wyslij(e) {
         e.preventDefault();
-        axios.post('http://localhost:3001/posts', { nick: nick, text: text});   
+        axios.post('https://chatserver-u1qo.onrender.com/posts', { nick: nick, text: text});   
         
         setText('');
     }
 
     useEffect(() => {
-        axios.get('http://localhost:3001/getMes').then((response) => {
+        axios.get('https://chatserver-u1qo.onrender.com/getMes').then((response) => {
             setLista(response.data);
         })
     });
