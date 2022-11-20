@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
+import {BrowserRouter, HashRouter, MemoryRouter, Link, Route, Routes} from 'react-router-dom';
 import ListUser from './strony/ListUser';
 import StworzUser from './strony/StworzUser';
 import Home from './strony/Home';
@@ -9,7 +9,7 @@ import Chat from './strony/Chat';
 function App() {
   return (
     <div className="App" >
-      <BrowserRouter forceRefresh={true}>
+      <MemoryRouter>
 
         <table>
           <tr>
@@ -25,7 +25,7 @@ function App() {
           <Route path='user/list' element={<ListUser />} />
           <Route path='chat' element={<Chat />}/>
         </Routes>
-      </BrowserRouter>
+      </MemoryRouter>
     </div>
   );
 }
