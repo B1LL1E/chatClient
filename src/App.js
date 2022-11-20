@@ -8,8 +8,8 @@ import Chat from './strony/Chat';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
+    <div className="App" >
+      <BrowserRouter forceRefresh={true}>
 
         <table>
           <tr>
