@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, HashRouter, MemoryRouter, Link, Route, Routes} from 'react-router-dom';
+import { MemoryRouter, Link, Route, Routes} from 'react-router-dom';
 import ListUser from './strony/ListUser';
 import StworzUser from './strony/StworzUser';
 import Home from './strony/Home';
@@ -11,11 +11,11 @@ function App() {
     <div className="App" >
       <MemoryRouter>
 
-        <table>
-          <tr>
-            <td><Link to='/'>HOME</Link></td>
-            <td><Link to='user/create'>Stwórz Użytkownika</Link></td>
-            <td><Link to='chat'>Chat</Link></td>
+        <table id='home'>
+          <tr id='home'>
+            <td id='home'><Link to='/'>HOME</Link></td>
+            <td id='home'><Link to='user/create'>Stwórz Użytkownika</Link></td>
+            <td id='home'><Link to='chat'>Chat</Link></td>
           </tr>
         </table>
 

@@ -1,0 +1,23 @@
+<table id='chat'>
+                {list.map((val, key) => {
+                    let idTr = 'tabelaChatP';
+                    let idDiv = 'divP';
+
+                    if(nick === val.nick){
+                        idTr = 'tabelaChatP'
+                        idDiv = 'divP'
+                    }
+                    else{
+                        idTr = 'tabelaChatL'
+                        idDiv = 'divL'
+                    }
+
+                    return(
+                        <tr id={idTr} key={key}>
+                            <td key={key}>
+                                <p id={idDiv}>{val.nick}: {val.text}</p>
+                            </td>
+                        </tr>
+                    )
+                })}
+            </table>

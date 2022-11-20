@@ -3,17 +3,17 @@ body{
   text-align: center;
 }
 
-td{
+td#home{
   border: solid 1px;
   font-size: 50px;
 }
 
-tr{
+tr#home{
   border: solid 1px;
   width: 100%;
 }
 
-table{
+table#home{
   width: 100%;
 }
 
@@ -23,44 +23,4 @@ img{
 
 
 
-/* STWÓRZ UZYTKOWNIKA */
 
-input#nick,input#haslo,input#submit{
-  font-size: 50px;
-}
-
-
-
-/* CHAT */
-
-div#Chat{
-  font-size: 50px;
-}
-
-div#nick{
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  min-width: 200px;
-  padding: 20px;
-}
-
-div#buttonWyslij{
-  position: absolute;
-  top: 90%;
-  left: 60%;
-}
-
-#buttonWyslij{
-  font-size: 50px;
-}
-
-#tabelaChatP{
-  border: solid 1px;
-  text-align: right;
-}
-
-#tabelaChatL{
-  border: solid 1px;
-  text-align: left;
-}

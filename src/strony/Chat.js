@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import './Chat.css'
 
 export default function Chat() {
     
@@ -30,27 +31,40 @@ export default function Chat() {
             <div id='nick'>
                 <input id='nick' type='text' value={nick} onChange={(e) => setNick(e.target.value)}/>
             </div>
+            
+
+            <table id='wiadomosci'>
+                {list.map((val, key) => {
+                    let idTr = 'tabelaChatP';
+                    let idDiv = 'divP';
+                    let idNazwa = 'nazwaP'
+
+                    if(nick === val.nick){
+                        idTr = 'tabelaChatP'
+                        idDiv = 'divP'
+                        idNazwa = 'nazwaP'
+                    }
+                    else{
+                        idTr = 'tabelaChatL'
+                        idDiv = 'divL'
+                        idNazwa = 'nazwaL'
+                    }
+
+                    return(
+                        <tr id={idTr} key={key}>
+                            <td>
+                                <div id={idNazwa}>{val.nick}</div>
+                                <div id={idDiv}>{val.text}</div>
+                            </td>
+                        </tr>
+                    )
+                })}
+            </table>
+
             <div id='buttonWyslij'>
                 <input type='text' value={text} onChange={(e) => setText(e.target.value) } id='buttonWyslij' />
                 <button onClick={Wyslij} id='buttonWyslij'>WYSLIJ</button>
             </div>
-            
-            <table>
-                {list.map((val, key) => {
-                    let idTr = 'tabelaChatP';
-
-                    if(nick === val.nick){
-                        idTr = 'tabelaChatP'
-                    }
-                    else{
-                        idTr = 'tabelaChatL'
-                    }
-
-                    return(
-                        <tr id={idTr} key={key}><td key={key}>{val.nick}: {val.text}</td></tr>
-                    )
-                })}
-            </table>
         </div>
     )
 }
