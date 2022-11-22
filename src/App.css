@@ -1,16 +1,13 @@
-body{
+html, body{
   background-color: gray;
   text-align: center;
+  height: 100%;
 }
 
 td#home{
   border: solid 1px;
-  font-size: 50px;
-}
-
-tr#home{
-  border: solid 1px;
-  width: 100%;
+  font-size: 4vh;
+  height: 6vh;
 }
 
 table#home{
@@ -18,7 +15,7 @@ table#home{
 }
 
 img{
-  height: 50em;
+  height: 80vh;
 }
 
 

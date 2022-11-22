@@ -1,5 +1,6 @@
 div#Chat{
-    font-size: 50px;    
+    font-size: 50px;  
+    height: 100%;  
 }
 
 div#nick{
@@ -11,14 +12,13 @@ div#nick{
 }
 
 div#buttonWyslij{
-    position: absolute;
-    top: 90%;
-    left: 60%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
 }
-
-#buttonWyslij{
-    font-size: 50px;
-}
+input#buttonWyslij{font-size: 5vh; height: 8.5vh; width: 95%; text-align: right;}
+button#buttonWyslij{width: 5%; font-size: 5vh;}
 
 #tabelaChatP, #tabelaChatL{
     border: solid 1px;
@@ -28,11 +28,12 @@ div#buttonWyslij{
 #tabelaChatL{text-align: left;}
 
 
-
-table#wiadomosci{
-    width: 100%;
+div#wiadomosci{
+    color: black;
+    height: 85vh;
+    overflow: hidden;
+    overflow-y: scroll;
 }
-
 
 
 #divP, #divL {
