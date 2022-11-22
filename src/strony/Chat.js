@@ -7,7 +7,7 @@ export default function Chat() {
     
 
     const [text,setText] = useState('');
-    const [nick,setNick] = useState('BIL_LIE');
+    const [nick,setNick] = useState('');
 
     const [list,setLista] =useState([]);
 
@@ -57,7 +57,7 @@ export default function Chat() {
             </div>
 
             <div id='nick'>
-                <input id='nick' type='text' value={nick} onChange={(e) => setNick(e.target.value)}/>
+                <input id='nick' type='text' value={nick} onChange={(e) => setNick(e.target.value)} placeholder='Nick'/>
             </div>
 
             <div id='buttonWyslij'>
