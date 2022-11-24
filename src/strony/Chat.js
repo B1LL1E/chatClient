@@ -1,11 +1,8 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef} from 'react';
 import './Chat.css'
 
 export default function Chat() {
-    
-    
-
     const [text,setText] = useState('');
     const [nick,setNick] = useState('');
 
@@ -24,9 +21,28 @@ export default function Chat() {
         })
     });
 
+
+    const bottomRef = useRef(null);
+    useEffect(() => {
+        setTimeout(guzScroll, 600);
+    }, [])
+    
+    const [aktw, setAktw] = useState('TAK');
+    const guzScroll = () => {
+        if(aktw === 'TAK'){
+            document.getElementById('wiadomosci1').style.overflowY = 'hidden';
+            bottomRef.current.scrollIntoView();
+            setAktw('NIE');
+        }
+        else{
+            document.getElementById('wiadomosci1').style.overflowY = 'scroll';
+            setAktw('TAK');
+        }
+    }
+
     return(
         <div id='Chat'>
-            <div id='wiadomosci'>
+            <div id='wiadomosci1'>
                 <table id='wiadomosci'>           
                     {list.map((val, key) => {
                         let idTr = 'tabelaChatP';
@@ -43,6 +59,7 @@ export default function Chat() {
                             idDiv = 'divL'
                             idNazwa = 'nazwaL'
                         }
+                        
 
                         return(
                             <tr id={idTr} key={key}>
@@ -51,9 +68,11 @@ export default function Chat() {
                                     <div id={idDiv}>{val.text}</div>
                                 </td>
                             </tr>
+                            
                         )
                     })}
                 </table>
+                <p ref={bottomRef}></p>
             </div>
 
             <div id='nick'>
@@ -63,7 +82,11 @@ export default function Chat() {
             <div id='buttonWyslij'>
                 <input type='text' value={text} onChange={(e) => setText(e.target.value) } id='buttonWyslij' placeholder='Wprowadź Wiadomość' />
                 <button onClick={Wyslij} id='buttonWyslij'>✔</button>
-            </div>
+            </div>  
+
+            <div id='scroll' onClick={guzScroll}>
+                SCROLL
+            </div>    
         </div>
     )
 }

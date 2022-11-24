@@ -29,13 +29,12 @@ button#buttonWyslij{width: 5%; font-size: 5vh;}
 #tabelaChatL{text-align: left;}
 
 
-div#wiadomosci{
+div#wiadomosci1{
     color: black;
-    height: 85vh;
+    height: 84.5vh;
     overflow: hidden;
     overflow-y: scroll;
 }
-
 
 #divP, #divL {
     display: inline-block;
@@ -56,3 +55,19 @@ div#nazwaP, div#nazwaL{
 }
 div#nazwaP{margin-right: 20px;}
 div#nazwaL{margin-left: 20px;}
+
+
+div#scroll{
+    background-color: rgb(83, 83, 83);
+    padding: 15px;
+    display: inline-block;
+    position: absolute;
+    bottom: 80%;
+    left: 85%;
+    border-radius: 25px;
+    font-weight: bold;
+    color: white;
+}
+div#scroll:active{
+    background-color: rgb(62, 62, 62);
+}
