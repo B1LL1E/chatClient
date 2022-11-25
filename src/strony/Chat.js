@@ -118,7 +118,7 @@ export default function Chat() {
 
 
             <div id='Nnick'>
-                <p id='tytul'>Nick Chat</p>
+                <p id='tytul'>Wprowadź swój nick</p>
                 <input id='Nnick' type='text' placeholder="Nick" value={nick} onChange={(e) => setNick(e.target.value)} maxLength='20'/><br/>
                 <input id='Nlogin' type='button' value='LOGIN' onClick={PojawUstNick}/>
             </div>
