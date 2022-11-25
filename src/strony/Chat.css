@@ -12,6 +12,8 @@ div#nick{
 }
 
 
+
+/* INPUT DO WIADOMOSCI */
 div#buttonWyslij{
     position: fixed;
     bottom: 0;
@@ -21,13 +23,15 @@ div#buttonWyslij{
 input#buttonWyslij{font-size: 5vh; height: 8.5vh; width: 95%; text-align: right;}
 button#buttonWyslij{width: 5%; font-size: 5vh;}
 
+
+
+/* WIADOMOSĆI */
 #tabelaChatP, #tabelaChatL{
     border: solid 1px;
     height: 100px;
 }
 #tabelaChatP{text-align: right;}
 #tabelaChatL{text-align: left;}
-
 
 div#wiadomosci1{
     color: black;
@@ -48,7 +52,6 @@ div#wiadomosci1{
 #divP{background-color: rgb(81, 255, 249, 0.7);}
 #divL{background-color: rgba(34, 34, 34, 0.5);color: white;}
 
-
 div#nazwaP, div#nazwaL{
     color: black;
     font-size: 50%;
@@ -57,17 +60,48 @@ div#nazwaP{margin-right: 20px;}
 div#nazwaL{margin-left: 20px;}
 
 
-div#scroll{
+
+/* USTAWIANIE NICKU */
+div#Nnick{
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 900px;
+    background-color: #bcbcbc;
+    border-radius: 25px;
+    height: 350px;
+    border: solid 5px;
+}
+
+input#Nnick, input#Nlogin{
+    font-size: 50px;
+}
+
+p#tytul{
+    font-weight: bold;
+}
+
+
+
+/* BAR */
+div#BAR{
+    background-color: black;
+    height: 400px;
+    width: 200px;
+    position: absolute;
+    top:6.5vh;
+    right: 10%;
+    border-radius: 0px 0px 25px 25px;
+}
+.przycisk{
     background-color: rgb(83, 83, 83);
     padding: 15px;
     display: inline-block;
-    position: absolute;
-    bottom: 80%;
-    left: 85%;
     border-radius: 25px;
     font-weight: bold;
     color: white;
+    width: 150px;
+    margin-bottom: 5px;
 }
-div#scroll:active{
-    background-color: rgb(62, 62, 62);
-}
+.przycisk:active{background-color: rgb(62, 62, 62);}

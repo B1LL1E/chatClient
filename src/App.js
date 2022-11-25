@@ -1,10 +1,9 @@
 import './App.css';
 import { MemoryRouter, Link, Route, Routes} from 'react-router-dom';
-import ListUser from './strony/ListUser';
+// import ListUser from './strony/ListUser';
 import StworzUser from './strony/StworzUser';
 import Home from './strony/Home';
 import Chat from './strony/Chat';
-
 
 function App() {
   return (
@@ -21,9 +20,11 @@ function App() {
 
         <Routes>
           <Route index element={<Home />}/>
+
           <Route path='user/create' element={<StworzUser />} />
-          <Route path='user/list' element={<ListUser />} />
+
           <Route path='chat' element={<Chat />}/>
+
         </Routes>
       </MemoryRouter>
     </div>
