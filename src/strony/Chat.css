@@ -94,7 +94,19 @@ div#BAR{
     right: 10%;
     border-radius: 0px 0px 25px 25px;
 }
+
+/* marginesy dla przycisku oraz nadanie 3d */
 .przycisk{
+    margin-top: 5px;
+    transform-style: preserve-3d;
+} 
+/* zmiana tla podczasa wcisniecia przycisku */
+div#sciana:active, div#sciana2:active{background-color: rgb(62, 62, 62);}
+
+
+
+/* przycisk scroll */
+div#sciana{
     background-color: rgb(83, 83, 83);
     padding: 15px;
     display: inline-block;
@@ -102,6 +114,41 @@ div#BAR{
     font-weight: bold;
     color: white;
     width: 150px;
-    margin-bottom: 5px;
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0) translateZ(-101px);
 }
-.przycisk:active{background-color: rgb(62, 62, 62);}
+
+/* druga sciana dla przycisku scroll */
+div#sciana2{
+    background-color: rgb(83, 83, 83);
+    padding: 15px;
+    display: inline-block;
+    border-radius: 25px;
+    font-weight: bold;
+    color: white;
+    width: 150px;
+
+    transform: rotateY(90deg) translateZ(-100px);
+}
+
+div#scroll{
+    transform-style: preserve-3d;  
+    transition: 0.5s;
+    width: 200px;
+}
+
+
+
+/* przycisk Ustawienie Nick'u */
+div#pokUstNick{
+    background-color: rgb(83, 83, 83);
+    padding: 15px;
+    display: inline-block;
+    border-radius: 25px;
+    font-weight: bold;
+    color: white;
+    width: 150px;
+
+}
