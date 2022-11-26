@@ -38,7 +38,7 @@ export default function Chat() {
             bottomRef.current.scrollIntoView();
 
             //ustawienie css, zmiena scianki na sciana2
-            document.getElementById('scroll').style.transform = 'rotateY(-90deg)'
+            document.getElementById('scroll').style.transform = 'rotateY(-90.01deg)'
 
             setAktw('NIE');
         }
@@ -110,7 +110,7 @@ export default function Chat() {
 
                 <div id='BAR'>
                     <div id='scroll' class='przycisk' onClick={guzScroll}>
-                        <div id='sciana2'>XD</div>
+                        <div id='sciana2'>SCROL</div>
                         <div id='sciana'>SCROL</div>
                         
                     </div> 
