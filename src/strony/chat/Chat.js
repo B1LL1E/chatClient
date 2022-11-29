@@ -71,7 +71,10 @@ export default function Chat() {
         }
     }
 
-
+    //chowanie BARU
+    const hideBarClick = () => {
+        document.getElementById('BAR').style.transform = ''
+    }
 
     return(
         <div id='Chat'>
@@ -108,18 +111,20 @@ export default function Chat() {
                 <p ref={bottomRef}></p>
 
 
-                <div id='BAR'>
-                    <div id='scroll' class='przycisk' onClick={guzScroll}>
-                        <div id='sciana2'>SCROL</div>
-                        <div id='sciana'>SCROL</div>
-                        
-                    </div> 
-
-                    <div id='pokUstNick' class='przycisk' onClick={PojawUstNick}>NICK</div>
-                </div>
+                
 
             </div>
 
+            <div id='BAR'>
+                    <div id='scroll' class='przycisk' onClick={guzScroll}>
+                        <div id='sciana2'>SCROL</div>
+                        <div id='sciana'>SCROL</div>
+                    </div> 
+                    <div id='pokUstNick' class='przycisk' onClick={PojawUstNick}>NICK</div>
+
+
+                    <div id='hidBar2'><div id='hidBar' onClick={hideBarClick}>/\</div></div>
+            </div>
 
             <div id='buttonWyslij'>
                 <input type='text' value={text} onChange={(e) => setText(e.target.value) } id='buttonWyslij' placeholder='Wprowadź Wiadomość' />
