@@ -68,6 +68,22 @@ export default function Chat() {
         }
     }
 
+    //clickBARhide
+    const [clickBARhidePF, setClickBARhidePF] = useState('TAK');
+    const clickBARhide = () => {
+        if(clickBARhidePF === 'TAK'){
+            document.getElementById('BAR').style.top = '-65px';
+            document.getElementById('BAR').style.opacity = '30%';
+            document.getElementById('BARhide1').style.transform = 'rotate(0deg)'
+            setClickBARhidePF('NIE');
+        }
+        else{
+            document.getElementById('BAR').style.top = '0px';
+            document.getElementById('BAR').style.opacity = '100%';
+            document.getElementById('BARhide1').style.transform = 'rotate(180deg)'
+            setClickBARhidePF('TAK');
+        }
+    }
 
     return(
         <div id='Chat'>
@@ -86,8 +102,13 @@ export default function Chat() {
                 <form>
                     <input id='Nnick' type='text' placeholder="Nick" value={nick} onChange={(e) => setNick(e.target.value)} maxLength='20'/><br/>
                     <input id='Nlogin' type='submit' value='LOGIN' onClick={PojawUstNick}/>
-                    {/*  */}
                 </form>
+            </div>
+
+            <div id='BAR'>
+                <div id='BARkafelek'>XD</div>
+
+                <div id='BARhide' onClick={clickBARhide}><div id='BARhide1'>&#11167;</div></div>
             </div>
 
         </div>

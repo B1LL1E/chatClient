@@ -38,7 +38,7 @@ function App() {
                 <div class='gloPrzycisk'><Link class='innerGloPrzycisk' to='chat'>💬</Link></div>
               </td>
 
-              <td id='gloTd2' onClick={showGloBar}><div id='gloBarStrz'>&larr;</div></td>
+              <td id='gloTd2' onClick={showGloBar}><div id='gloBarStrz'>&#129088;</div></td>
             </tr>
           </table>
         </div>

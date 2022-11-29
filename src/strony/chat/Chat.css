@@ -30,10 +30,6 @@ form#buttonWyslij{
 
 
 
-
-
-
-
 /* USTAWIANIE NICKU */
 div#Nnick{
     position: absolute;
@@ -57,6 +53,30 @@ p#tytul{
 
 
 
+/* BAR */
+div#BAR{
+    position: absolute;
+    top: 0px;
+    background-color: aqua;
+    right: 10%;
+    transform: translate(-50%, 0);
+    width: 100px;
+    color: white;
+    transition: 0.2s;
+    
+    border-radius: 0px 0px 25px 25px;
+}
+div#BARkafelek{
+    height: 65px;
+}
+div#BARhide{
+    width: 100%;
+    font-size: 30px;
 
+}
+div#BARhide1{
+    transform: rotate(180deg) ;
+    transition: 0.2s;
+}
 
 
