@@ -1,0 +1,33 @@
+/* WIADOMOSĆI */
+#tabelaChatP, #tabelaChatL{
+    border: solid 1px;
+    height: 100px;
+}
+#tabelaChatP{text-align: right;}
+#tabelaChatL{text-align: left;}
+
+div#wiadomosci1{
+    color: black;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 91vh;
+}
+
+#divP, #divL {
+    display: inline-block;
+    padding: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 25px;
+    max-width: 60%;
+    color: white;
+}
+#divP{background-color: rgb(81, 255, 249, 0.7);}
+#divL{background-color: rgba(34, 34, 34, 0.5);color: white;}
+
+div#nazwaP, div#nazwaL{
+    color: black;
+    font-size: 50%;
+}
+div#nazwaP{margin-right: 20px;}
+div#nazwaL{margin-left: 20px;}

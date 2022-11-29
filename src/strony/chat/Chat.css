@@ -15,49 +15,22 @@ div#nick{
 
 /* INPUT DO WIADOMOSCI */
 div#buttonWyslij{
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    bottom: 1px;
     width: 100%;
     display: flex;
+    height: 9vh;
 }
 input#buttonWyslij{font-size: 5vh; height: 8.5vh; width: 95%; text-align: right;}
-button#buttonWyslij{width: 5%; font-size: 5vh;}
-
-
-
-/* WIADOMOSĆI */
-#tabelaChatP, #tabelaChatL{
-    border: solid 1px;
-    height: 100px;
-}
-#tabelaChatP{text-align: right;}
-#tabelaChatL{text-align: left;}
-
-div#wiadomosci1{
-    color: black;
-    height: 84.5vh;
-    overflow: hidden;
-    overflow-y: scroll;
+input#buttonWyslij1{width: 5%; font-size: 5vh;}
+form#buttonWyslij{
+    display: flex;
+    width: 100%;
 }
 
-#divP, #divL {
-    display: inline-block;
-    padding: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 25px;
-    max-width: 60%;
-    color: white;
-}
-#divP{background-color: rgb(81, 255, 249, 0.7);}
-#divL{background-color: rgba(34, 34, 34, 0.5);color: white;}
 
-div#nazwaP, div#nazwaL{
-    color: black;
-    font-size: 50%;
-}
-div#nazwaP{margin-right: 20px;}
-div#nazwaL{margin-left: 20px;}
+
+
 
 
 
@@ -84,88 +57,6 @@ p#tytul{
 
 
 
-/* BAR */
-div#BAR{
-    background-color: black;
-    width: 250px;
-    position: absolute;
-    top:6.5vh;
-    right: 10%;
-    border-radius: 0px 0px 25px 25px;
-    transform: translate(0px,-20px);
-    z-index: 0;
-}
 
-/* schowanie Baru */
-div#hidBar{
-    background-color: rgb(0, 123, 255);
-    font-weight: bold;
-    color: white;
-    position: absolute;
-    display: inline-block;
-    font-weight: bold;
-    color: white;
-    width: 100%;
-    height: 40px;
-
-    border-radius: 0px 0px 25px 25px;
-    bottom: 0px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    font-size: 30px;
-}
-div#hidBar2{height: 40px; width: 100px; margin-top: 5px; }
-div#hidBar:active{background-color: rgb(0, 89, 184);}
-
-/* marginesy dla przycisku oraz nadanie 3d */
-.przycisk{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    transform-style: preserve-3d;
-} 
-
-/* przycisk scroll */
-div#sciana{
-    background-color: rgb(83, 83, 83);
-    padding: 15px;
-    display: inline-block;
-    border-radius: 50px;
-    font-weight: bold;
-    color: white;
-    width: 150px;
-
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0) translateZ(-90px);
-}
-/* druga sciana dla przycisku scroll */
-div#sciana2{
-    background-color: rgb(83, 83, 83);
-    padding: 15px;
-    display: inline-block;
-    border-radius: 15px;
-    font-weight: bold;
-    color: white;
-    width: 150px;
-
-    transform: rotateY(90deg) translateZ(-90px);
-}
-
-div#scroll{
-    transform-style: preserve-3d;  
-    transition: 0.3s;
-}
-
-
-/* przycisk Ustawienie Nick'u */
-div#pokUstNick{
-    background-color: rgb(83, 83, 83);
-    padding: 15px;
-    display: inline-block;
-    border-radius: 25px;
-    font-weight: bold;
-    color: white;
-    width: 150px;
-}
 
 
