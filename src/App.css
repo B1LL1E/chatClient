@@ -22,6 +22,11 @@ div#gloBar{
   opacity: 20%;
 
   transition:0.2s;
+
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;  
+  user-select: none;
 }
 
 /* strzałka w lewo na barze */

@@ -33,9 +33,9 @@ form#buttonWyslij{
 /* USTAWIANIE NICKU */
 div#Nnick{
     position: absolute;
-    top: 15vh;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
     width: 900px;
     background-color: #bcbcbc;
     border-radius: 25px;
@@ -49,6 +49,11 @@ input#Nnick, input#Nlogin{
 
 p#tytul{
     font-weight: bold;
+
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;  
+    user-select: none;
 }
 
 
@@ -65,6 +70,11 @@ div#BAR{
     transition: 0.2s;
     
     border-radius: 0px 0px 25px 25px;
+
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;  
+    user-select: none;
 }
 div#BARkafelek{
     height: 65px;
