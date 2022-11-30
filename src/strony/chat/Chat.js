@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useState, useRef} from 'react';
+import React, { useState } from 'react';
 import './Chat.css'
 import Wiadomosci from './Wiadomosci';
 

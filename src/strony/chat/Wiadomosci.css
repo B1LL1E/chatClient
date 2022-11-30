@@ -31,3 +31,29 @@ div#nazwaP, div#nazwaL{
 }
 div#nazwaP{margin-right: 20px;}
 div#nazwaL{margin-left: 20px;}
+
+/* KOMUNIKAT */
+h1#komunikat{
+    color: white;
+}
+
+/* kropki komunikatu */
+#kropka{
+    position: relative;
+    animation: animKropki 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+    display: inline-block;
+    font-size: 200px;
+    top:-100px;
+}
+
+@keyframes animKropki{
+        0%, 40%,100%{
+            
+            transform: translateY(0px)
+        }
+
+        20%{
+            transform: translateY(-20px)
+        }
+}

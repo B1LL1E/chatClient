@@ -22,9 +22,19 @@ export default function Wiadomosci(props){
     const bottomRef = useRef(null);
 
     return(
+        
         <div id='wiadomosci1'>
-                <table id='wiadomosci'>           
+            <h1 id='komunikat'>
+                <div id='kropka' style={{ "--i":1 }}>.</div>
+                <div id='kropka' style={{ "--i":2 }}>.</div>
+                <div id='kropka' style={{ "--i":3 }}>.</div>
+            </h1>   
+                <table id='wiadomosci'>  
+                          
                     {list.map((val, key) => {
+
+                        document.getElementById('komunikat').style.display = 'none';
+
                         let idTr = 'tabelaChatP';
                         let idDiv = 'divP';
                         let idNazwa = 'nazwaP'
@@ -40,18 +50,20 @@ export default function Wiadomosci(props){
                             idNazwa = 'nazwaL'
                         }
                         
-
                         return(
+                        
                             <tr id={idTr} key={key}>
                                 <td>
                                     <div id={idNazwa}>{val.nick}</div>
                                     <div id={idDiv}>{val.text}</div>
                                 </td>
                             </tr>
-                            
-                        )
+                        
+                        )       
                     })}
                 </table>
+
+                
                 <p ref={bottomRef}></p>
 
             </div>
