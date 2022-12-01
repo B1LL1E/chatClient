@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import './Chat.css'
-import Wiadomosci from './Wiadomosci';
+import Wiadomosci from './Wiadomosci.js';
 
 export default function Chat() {
     const [text,setText] = useState('');
