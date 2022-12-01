@@ -54,7 +54,14 @@ export default function Chat() {
     const PojawUstNick = (e) => {
         e.preventDefault();
         if(pokUstNick === 'TAK'){
-            document.getElementById('Nnick').style.display = 'none';
+            document.getElementById('Nnick').style.opacity = '0%';
+            setTimeout(() => {
+                document.getElementById('Nnick').style.display = 'none';
+                if(nick === ''){
+                    setNick('ANONIM');
+                }
+            }, 200);
+            
             setPokUstNick('NIE');
         }
         else{
@@ -63,10 +70,9 @@ export default function Chat() {
         }   
         
         //ustawianie nicku na ANONIM w przypadku jego braku
-        if(nick === ''){
-            setNick('ANONIM');
-        }
+        
     }
+
 
     //clickBARhide
     const [clickBARhidePF, setClickBARhidePF] = useState('TAK');

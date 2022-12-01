@@ -14,8 +14,13 @@ export default function Wiadomosci(props){
             setLista(response.data);
         })
         //pobieranie i ustawianie nicku z pliku chat.js
-        setNick(props.nick);
+        
+        
     });
+
+    useEffect(() => {
+        setNick(props.nick); 
+    }, [props.nick])
 
     
 

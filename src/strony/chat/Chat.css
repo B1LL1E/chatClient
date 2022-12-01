@@ -41,6 +41,7 @@ div#Nnick{
     border-radius: 25px;
     height: 350px;
     border: solid 5px;
+    transition: 0.2s;
 }
 
 input#Nnick, input#Nlogin{
