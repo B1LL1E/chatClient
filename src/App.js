@@ -1,5 +1,5 @@
 import './App.css';
-import { MemoryRouter, Link, Route, Routes} from 'react-router-dom';
+import { BrowserRouter, Link, Route, Routes} from 'react-router-dom';
 import StworzUser from './strony/stworzUser/StworzUser';
 import Home from './strony/home/Home';
 import Chat from './strony/chat/Chat';
@@ -27,7 +27,7 @@ function App() {
 
   return (
     <div className="App" >
-      <MemoryRouter>
+      <BrowserRouter>
 
         <div id='gloBar'>
           <table>
@@ -51,7 +51,7 @@ function App() {
           <Route path='chat' element={<Chat />}/>
 
         </Routes>
-      </MemoryRouter>
+      </BrowserRouter>
     </div>
   );
 }

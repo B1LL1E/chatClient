@@ -17,43 +17,14 @@ export default function Chat() {
     }
     
 
-
-    // //scroll
-    // const bottomRef = useRef(null);
-    // useEffect(() => {
-    //     setTimeout(, 600);
-    // }, [])
-    
-
-    // const [aktw, setAktw] = useState('TAK');
-    // const guzScroll = () => {
-    //     if(aktw === 'TAK'){
-    //         //schowanie scrollu
-    //         document.getElementById('wiadomosci1').style.overflowY = 'hidden';
-    //         bottomRef.current.scrollIntoView();
-
-    //         //ustawienie css, zmiena scianki na sciana2
-    //         document.getElementById('scroll').style.transform = 'rotateY(-90.01deg)'
-
-    //         setAktw('NIE');
-    //     }
-    //     else{
-    //         //pojawienie scrollu
-    //         document.getElementById('wiadomosci1').style.overflowY = 'scroll';
-
-    //         //ustawienie css, zmiena scianki na sciana
-    //         document.getElementById('scroll').style.transform = 'rotateY(0deg)'
-
-    //         setAktw('TAK');
-    //     }
-    // }
-
-
     const [pokUstNick, setPokUstNick] = useState('TAK');
+
+    const [zlyNick,setZlyNick] = useState('');
     //pojawianie się ustawNick
     const PojawUstNick = (e) => {
         e.preventDefault();
         if(pokUstNick === 'TAK'){
+            //ustawianie nicku na ANONIM w przypadku jego braku
             document.getElementById('Nnick').style.opacity = '0%';
             setTimeout(() => {
                 document.getElementById('Nnick').style.display = 'none';
@@ -69,7 +40,26 @@ export default function Chat() {
             setPokUstNick('TAK');
         }   
         
-        //ustawianie nicku na ANONIM w przypadku jego braku
+        //wysNick javascript
+        
+        let dlugoscNick = nick.length;
+        let wyraz = '';
+        let liczWyk = 0;
+        let mojInterval = setInterval(() => {
+
+            let czas = setTimeout(() => {console.log('')}, 2000);
+            wyraz = wyraz + nick.substring(liczWyk, liczWyk +1);
+            liczWyk++;
+            setZlyNick(wyraz);
+            if(liczWyk === dlugoscNick)
+            {
+                clearInterval(mojInterval);
+                
+            }
+        }, 200)
+
+
+        // document.getElementById('wysNickh1').style.;
         
     }
 
@@ -91,6 +81,9 @@ export default function Chat() {
         }
     }
 
+    
+
+
     return(
         <div id='Chat'>
             <Wiadomosci nick={nick}/>
@@ -104,17 +97,23 @@ export default function Chat() {
 
 
             <div id='Nnick'>
-                <p id='tytul'>Wprowadź swój nick</p>
-                <form>
-                    <input id='Nnick' type='text' placeholder="Nick" value={nick} onChange={(e) => setNick(e.target.value)} maxLength='20'/><br/>
-                    <input id='Nlogin' type='submit' value='LOGIN' onClick={PojawUstNick}/>
-                </form>
+                <div id='Nnick1'>
+                    <p id='tytul'>Wprowadź swój nick</p>
+                    <form id='Nnick'>
+                        <input id='Nnick' type='text' placeholder="Nick" value={nick} onChange={(e) => setNick(e.target.value)} maxLength='20'/><br/>
+                        <input id='Nlogin' type='submit' value='LOGIN' onClick={PojawUstNick}/>
+                    </form>
+                </div>
             </div>
 
             <div id='BAR'>
-                <div id='BARkafelek'>XD</div>
+                <div id='BARkafelek'></div>
 
                 <div id='BARhide' onClick={clickBARhide}><div id='BARhide1'>&#11167;</div></div>
+            </div>
+
+            <div id='wysNick'>
+                <h1 id='wysNickh1'>{zlyNick}</h1>
             </div>
 
         </div>

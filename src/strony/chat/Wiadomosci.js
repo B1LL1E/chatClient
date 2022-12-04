@@ -11,21 +11,29 @@ export default function Wiadomosci(props){
     //odbieranie
     useEffect(() => {
         axios.get('https://chatserver-u1qo.onrender.com/getMes').then((response) => {
+            if(response.data !== list){
+                console.log(list);
+            }
             setLista(response.data);
-        })
-        //pobieranie i ustawianie nicku z pliku chat.js
-        
-        
+        })       
     });
 
+    //pobieranie i ustawianie nicku z pliku chat.js
     useEffect(() => {
         setNick(props.nick); 
     }, [props.nick])
 
     
-
+    //przestawienie scrolla po pojawieniu nowej wiadomości
     const bottomRef = useRef(null);
-
+    const [scrollPF, setScrollPF] = useState('TAK');
+    useEffect(() => {
+        if(scrollPF === 'TAK'){
+            bottomRef.current.scrollIntoView();
+            setScrollPF('TAK');
+        }
+    }, [list]);
+    
     return(
         
         <div id='wiadomosci1'>
@@ -34,8 +42,7 @@ export default function Wiadomosci(props){
                 <div id='kropka' style={{ "--i":2 }}>.</div>
                 <div id='kropka' style={{ "--i":3 }}>.</div>
             </h1>   
-                <table id='wiadomosci'>  
-                          
+                <table id='wiadomosci'>                            
                     {list.map((val, key) => {
 
                         document.getElementById('komunikat').style.display = 'none';
@@ -67,10 +74,7 @@ export default function Wiadomosci(props){
                         )       
                     })}
                 </table>
-
-                
                 <p ref={bottomRef}></p>
-
-            </div>
+        </div>
     )
 }

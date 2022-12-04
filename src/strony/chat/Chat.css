@@ -36,12 +36,15 @@ div#Nnick{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 900px;
+    width: 50vw;
     background-color: #bcbcbc;
-    border-radius: 25px;
-    height: 350px;
-    border: solid 5px;
+    height: 50vh;
     transition: 0.2s;
+
+    z-index: 1;
+}
+div#Nnick1{
+    margin: auto;
 }
 
 input#Nnick, input#Nlogin{
@@ -76,6 +79,8 @@ div#BAR{
     -moz-user-select: none;    
     -ms-user-select: none;  
     user-select: none;
+
+    z-index: 9;
 }
 div#BARkafelek{
     height: 65px;
@@ -90,4 +95,17 @@ div#BARhide1{
     transition: 0.2s;
 }
 
+
+/* nick wyswietlany u gory */
+
+div#wysNick{
+    position: absolute;
+    top:0;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+h1#wysNickh1{
+    color: white;
+}
 
