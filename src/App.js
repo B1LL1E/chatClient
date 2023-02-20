@@ -4,8 +4,22 @@ import StworzUser from './strony/stworzUser/StworzUser';
 import Home from './strony/home/Home';
 import Chat from './strony/chat/Chat';
 import { useState } from 'react';
+import { initializeApp } from "firebase/app";
 
 function App() {
+
+  //firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyCmNhnzItJ6CL8KCBCzx6SKpQjEOXQi-7c",
+    authDomain: "chatserver-a83f5.firebaseapp.com",
+    projectId: "chatserver-a83f5",
+    storageBucket: "chatserver-a83f5.appspot.com",
+    messagingSenderId: "930171056846",
+    appId: "1:930171056846:web:3a55570931e4f8b07a569f"
+  };
+  const app = initializeApp(firebaseConfig);
+
+
 
   const [showGloBarPF,setShowGloBarPF] = useState('TAK');
   const showGloBar = () => {

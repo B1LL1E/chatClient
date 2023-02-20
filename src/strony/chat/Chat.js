@@ -56,7 +56,7 @@ export default function Chat() {
                 clearInterval(mojInterval);
                 
             }
-        }, 200)
+        }, 50)
 
 
         // document.getElementById('wysNickh1').style.;
