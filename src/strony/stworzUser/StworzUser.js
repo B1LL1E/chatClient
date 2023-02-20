@@ -17,11 +17,11 @@ export default function StworzUser() {
     return(
         <div>
             <h1>Stwórz Użytkownika</h1>
-            <form onSubmit={handleSubmit}>
+            {/* <form onSubmit={handleSubmit}>
                 <input type='text' placeholder="NICK" name='nick' id='nick' onChange={ (e) => setNick(e.target.value)} /><br />
                 <input type='text' placeholder="HASŁO" name='haslo' id='haslo' onChange={ (e) => setHaslo(e.target.value)} /><br />
                 <input type='submit' value='STWÓRZ' id='submit'/>
-            </form>
+            </form> */}
         </div>
     );
 }
