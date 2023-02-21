@@ -100,8 +100,8 @@ div#BARhide1{
 
 div#wysNick{
     position: absolute;
-    top:0;
-    left: 75%;
+    top: 10%;
+    left: 80%;
     transform: translate(-50%,0);
 }
 
@@ -109,3 +109,23 @@ h1#wysNickh1{
     color: white;
 }
 
+
+div#wysnickChat{
+    color: white;
+    font-size: 5vw;
+    background-color: black;
+    border-radius: 25%;
+    width: 15vw;
+    height: 7vw;
+    position: absolute;
+    top: 2%;
+    right: 10%;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;  
+    user-select: none;
+}
+
+div#wysnickChat:active{
+    background-color: rgb(43, 43, 43);
+}

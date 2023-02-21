@@ -5,6 +5,7 @@ import Home from './strony/home/Home';
 import Chat from './strony/chat/Chat';
 import { useState } from 'react';
 import { initializeApp } from "firebase/app";
+import Kostka from './strony/kostka/Kostka';
 
 function App() {
 
@@ -48,7 +49,7 @@ function App() {
             <tr>
               <td id='gloTd1'>
                 <div class='gloPrzycisk'><Link class='innerGloPrzycisk' to='/'>🏠</Link></div>
-                <div class='gloPrzycisk'><Link class='innerGloPrzycisk' to='user/create'>❔</Link></div>
+                <div class='gloPrzycisk'><Link class='innerGloPrzycisk' to='kostka'>❔</Link></div>
                 <div class='gloPrzycisk'><Link class='innerGloPrzycisk' to='chat'>💬</Link></div>
               </td>
 
@@ -60,7 +61,7 @@ function App() {
         <Routes>
           <Route index element={<Home />}/>
 
-          <Route path='user/create' element={<StworzUser />} />
+          <Route path='kostka' element={<Kostka />} />
 
           <Route path='chat' element={<Chat />}/>
 

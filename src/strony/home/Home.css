@@ -1,0 +1,15 @@
+@keyframes start {
+    0%{opacity: 0%;}
+    10%{opacity: 100%;}
+    90%{opacity: 100%;}
+    100%{opacity: 0%;}
+}
+
+h1#napis{
+    opacity: 0%;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    transition: 1s;
+    animation: start 5s;
+}

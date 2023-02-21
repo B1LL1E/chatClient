@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Chat.css'
 import Wiadomosci from './Wiadomosci.js';
 
@@ -37,6 +37,7 @@ export default function Chat() {
         }
         else{
             document.getElementById('Nnick').style.display = 'block';
+            document.getElementById('Nnick').style.opacity = '100%';
             setPokUstNick('TAK');
         }   
         
@@ -47,7 +48,6 @@ export default function Chat() {
         let liczWyk = 0;
         let mojInterval = setInterval(() => {
 
-            let czas = setTimeout(() => {console.log('')}, 2000);
             wyraz = wyraz + nick.substring(liczWyk, liczWyk +1);
             liczWyk++;
             setZlyNick(wyraz);
@@ -62,6 +62,7 @@ export default function Chat() {
         // document.getElementById('wysNickh1').style.;
         
     }
+
 
 
     //clickBARhide
@@ -86,7 +87,7 @@ export default function Chat() {
 
     return(
         <div id='Chat'>
-            <Wiadomosci nick={nick}/>
+            <Wiadomosci nick={nick} />
 
             <div id='buttonWyslij'>
                 <form id='buttonWyslij'>
@@ -106,15 +107,17 @@ export default function Chat() {
                 </div>
             </div>
 
-            <div id='BAR'>
+            {/* <div id='BAR'>
                 <div id='BARkafelek'></div>
 
                 <div id='BARhide' onClick={clickBARhide}><div id='BARhide1'>&#11167;</div></div>
-            </div>
+            </div> */}
 
             <div id='wysNick'>
                 <h1 id='wysNickh1'>{zlyNick}</h1>
             </div>
+
+            <div id='wysnickChat' onClick={(e) => PojawUstNick(e)}>Nick</div>
 
         </div>
     )

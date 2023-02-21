@@ -11,12 +11,12 @@ export default function Wiadomosci(props){
     //odbieranie
     useEffect(() => {
         axios.get('https://chatserver-u1qo.onrender.com/getMes').then((response) => {
-            if(response.data !== list){
-                console.log(list);
-            }
+            // if(response.data !== list){
+            //     // console.log(list);
+            // }
             setLista(response.data);
         })       
-    });
+    },);
 
     //pobieranie i ustawianie nicku z pliku chat.js
     useEffect(() => {
@@ -25,14 +25,20 @@ export default function Wiadomosci(props){
 
     
     //przestawienie scrolla po pojawieniu nowej wiadomości
+    // const bottomRef = useRef(null);
+    // const [scrollPF, setScrollPF] = useState('TAK');
+    // useEffect(() => {
+    //     if(scrollPF === 'TAK'){
+    //         bottomRef.current.scrollIntoView();
+    //         setScrollPF('TAK');
+    //     }
+    // }, [list]);
+
     const bottomRef = useRef(null);
-    const [scrollPF, setScrollPF] = useState('TAK');
-    useEffect(() => {
-        if(scrollPF === 'TAK'){
-            bottomRef.current.scrollIntoView();
-            setScrollPF('TAK');
-        }
-    }, [list]);
+    const nadol = () => {
+        bottomRef.current.scrollIntoView();
+    }
+
     
     return(
         
@@ -74,6 +80,9 @@ export default function Wiadomosci(props){
                         )       
                     })}
                 </table>
+
+                <div id='nadol' onClick={nadol}>⬇</div>
+                
                 <p ref={bottomRef}></p>
         </div>
     )
