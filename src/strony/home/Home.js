@@ -6,7 +6,7 @@ export default function Home() {
             <h1>Home</h1>
             {/* <img src='https://media.tenor.com/w9igeBYuXpsAAAAM/amog-us-among-us.gif' alt='imgHome'></img> */}
             
-            <h1 id='napis'> Wybierz opcje z menu po lewej stronie</h1>
+            <h1 id='napis'> Choose one from the option on the left</h1>
         </div>
     )
 }
