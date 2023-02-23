@@ -14,7 +14,7 @@
     --kolor: rgb(3, 0, 169);
     --predkosc360: 5s;
     --rotX: 0deg;
-    --rotY: -30deg;
+    --rotY: 0deg;
     --rotZ: 0deg;
     --odX: 50%;
     --odY: 50%;
@@ -35,13 +35,21 @@
     }
 }
 
+div#cube4{
+    transform-style: preserve-3d;
+    animation: przesuwanie var(--czasPrzesu) linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
 div#cube3{
     transform-style: preserve-3d;
     transform: rotateY(var(--rotY)) rotateX(var(--rotX)) rotateZ(var(--rotZ));
     position: absolute;
     top: 50%;
     left: 50%;
-    animation: przesuwanie var(--czasPrzesu) linear infinite;
+    /* animation: przesuwanie var(--czasPrzesu) linear infinite; */
 }
 
 div#cube2{
@@ -80,4 +88,22 @@ div#wall{
 div#floor{
     transform-style: preserve-3d;
     transform: translate(-50%,-50%) translateY(calc(var(--floor) * calc(var(--wielkosc) / 2))) rotateX(90deg);
+}
+
+div#cien{
+    background-color: var(--kolor);
+    height: calc(var(--wielkosc) * 1.5);
+    width: calc(var(--wielkosc) * 1.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) translateZ(calc(-2 * var(--wielkosc)));
+    filter: blur(70px);
+    border-radius: 50%;
+
+    /* animation: przesuwanie var(--czasPrzesu) linear infinite; */
+    /* transform:  rotateY(calc(-1 * var(--rotY))) rotateX(calc(-1 * var(--rotX))) rotateZ(calc(-1 * var(--rotZ))); */
+    /* transform: translateZ(calc(var(--wielkosc) * -2)); */
+    /* rotateY(calc(1 * var(--rotY))) rotateX(calc(1 * var(--rotX))) rotateZ(calc(1 * var(--rotZ)))  */
+    
 }
