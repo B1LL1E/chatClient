@@ -1,0 +1,83 @@
+@keyframes obrotKoscia {
+    0% {
+        transform: rotateX(0deg) ;
+    }
+
+    100%{
+        transform: rotateX(360deg) ;
+    }
+}
+
+
+:root{
+    --wielkosc: 9.9vw;
+    --kolor: rgb(3, 0, 169);
+    --predkosc360: 5s;
+    --rotX: 0deg;
+    --rotY: -30deg;
+    --rotZ: 0deg;
+    --odX: 50%;
+    --odY: 50%;
+    --doX: 50%;
+    --doY: 50%;
+    --czasPrzesu: 5s;
+}
+
+@keyframes przesuwanie {
+    0%{
+        top: var(--odY);
+        left: var(--odX);
+    }
+
+    100%{
+        top: var(--doY);
+        left: var(--doX);
+    }
+}
+
+div#cube3{
+    transform-style: preserve-3d;
+    transform: rotateY(var(--rotY)) rotateX(var(--rotX)) rotateZ(var(--rotZ));
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: przesuwanie var(--czasPrzesu) linear infinite;
+}
+
+div#cube2{
+    transform-style: preserve-3d;
+    transform: rotateX(0deg)  rotateZ(0deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: obrotKoscia var(--predkosc360) linear infinite;
+}
+
+div#cube{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotateY(50deg) rotateX(0deg);
+    transform-style: preserve-3d;
+    
+}
+
+div#wall, div#floor{
+    background-color: var(--kolor);
+    height: var(--wielkosc);
+    width: var(--wielkosc);
+    border: solid 0.1vw black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+div#wall{
+    transform-style: preserve-3d;
+    transform: translate(-50%,-50%)  rotateY(calc(var(--obrot) * 90deg))  translateZ(calc(var(--wielkosc) / 2));
+}
+
+div#floor{
+    transform-style: preserve-3d;
+    transform: translate(-50%,-50%) translateY(calc(var(--floor) * calc(var(--wielkosc) / 2))) rotateX(90deg);
+}

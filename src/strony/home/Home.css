@@ -13,3 +13,7 @@ h1#napis{
     transition: 1s;
     animation: start 5s;
 }
+
+body{
+    overflow: hidden;
+}
