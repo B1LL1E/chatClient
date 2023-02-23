@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './Chat.css'
 import Wiadomosci from './Wiadomosci.js';
 
+
 export default function Chat() {
     const [text,setText] = useState('');
     const [nick,setNick] = useState('');
@@ -87,7 +88,14 @@ export default function Chat() {
 
     return(
         <div id='Chat'>
+
+            
+
             <Wiadomosci nick={nick} />
+
+            
+
+            
 
             <div id='buttonWyslij'>
                 <form id='buttonWyslij'>
@@ -119,6 +127,8 @@ export default function Chat() {
 
             <div id='wysnickChat' onClick={(e) => PojawUstNick(e)}>Nick</div>
 
+            
+            
         </div>
     )
 }

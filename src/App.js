@@ -44,6 +44,18 @@ function App() {
     <div className="App" >
       <BrowserRouter>
 
+        
+
+        <Routes>
+          <Route index element={<Home />}/>
+
+          <Route path='kostka' element={<Kostka />} />
+
+          <Route path='chat' element={<Chat />}/>
+
+        </Routes>
+
+
         <div id='gloBar'>
           <table>
             <tr>
@@ -57,15 +69,6 @@ function App() {
             </tr>
           </table>
         </div>
-
-        <Routes>
-          <Route index element={<Home />}/>
-
-          <Route path='kostka' element={<Kostka />} />
-
-          <Route path='chat' element={<Chat />}/>
-
-        </Routes>
       </BrowserRouter>
     </div>
   );

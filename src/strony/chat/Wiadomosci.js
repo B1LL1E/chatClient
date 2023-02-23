@@ -43,12 +43,17 @@ export default function Wiadomosci(props){
     return(
         
         <div id='wiadomosci1'>
+
+            
+
             <h1 id='komunikat'>
                 <div id='kropka' style={{ "--i":1 }}>.</div>
                 <div id='kropka' style={{ "--i":2 }}>.</div>
                 <div id='kropka' style={{ "--i":3 }}>.</div>
             </h1>   
-                <table id='wiadomosci'>                            
+            <div id='tabela'>
+                
+                <table id='wiadomosci'  style={{ zIndex:20, opacity:"100%"}}>                            
                     {list.map((val, key) => {
 
                         document.getElementById('komunikat').style.display = 'none';
@@ -70,7 +75,7 @@ export default function Wiadomosci(props){
                         
                         return(
                         
-                            <tr id={idTr} key={key}>
+                            <tr id={idTr} key={key}  style={{ zIndex:2}}>
                                 <td>
                                     <div id={idNazwa}>{val.nick}</div>
                                     <div id={idDiv}>{val.text}</div>
@@ -80,10 +85,15 @@ export default function Wiadomosci(props){
                         )       
                     })}
                 </table>
+                 
+            </div>
+           
 
-                <div id='nadol' onClick={nadol}>⬇</div>
+            <div id='nadol' onClick={nadol}>⬇</div>
+            
+            <p ref={bottomRef}></p>
+
                 
-                <p ref={bottomRef}></p>
         </div>
     )
 }
